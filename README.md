@@ -40,3 +40,20 @@ docker run --name hello-postgres -p 5432:5432 -e POSTGRES_PASSWORD=root -d postg
 ```sh
 python manage.py runserver
 ```
+
+### Criando uma aplicação
+
+```sh
+(.venv) ~/hello-django/hello$ python manage.py startapp <nome_do_diretorio>
+```
+
+### Criando tabelas para nosso modelo no banco de dados
+
+```sh
+#Adicionando novo modelo ao banco de dados
+(myvenv) ~/djangogirls$ python manage.py makemigrations <nome_do_diretorio
+
+
+# Aplicando o arquivo de migração ao banco de dados
+python manage.py migrate blog
+```
