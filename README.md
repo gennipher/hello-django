@@ -57,3 +57,37 @@ python manage.py runserver
 # Aplicando o arquivo de migração ao banco de dados
 python manage.py migrate blog
 ```
+
+### Django.admin / Criando um superusuario (superuser)
+
+Acessar
+
+```
+#Entrar na pasta e importar o modelo
+blog/admin.py
+
+#Iniciar o servidor web e ir para http://localhost/admin
+python manage.py runserver
+
+#Para fazer login, precisa criar um superusuário (superuser)
+python manage.py createsuperuser
+
+#Inserir nome de usuário, email e senha.
+#Fazer login com as credenciais de superusuário.
+```
+
+### Configurando no PythonAnywhere
+
+* Criar conta:
+  Acessar: www.pythonanywhere.com e criar conta "Begginer";
+* Criar Token de API:
+  Selecionar a guia 'API Token' e clicar em 'Create a new API Token';
+* Ir para a Dashboard do PythonAnywhere clicando na logo e clicar em 'Bash'
+
+```sh
+#Na linha de comando do PythonAnywhere
+pip3.6 install --user pythonanywhere
+
+#Executar a ferramenta para configurar a aplicação a partir do GitHub automaticamente
+pa_autoconfigure_django.py https://github.com/<your-github-username>/nome-do-repositorio.git
+```
